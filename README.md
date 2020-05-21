@@ -16,6 +16,12 @@ Use visual studio 2017 or laster to open the solution project and run
 ```
 .NET project is require visual stuido to open
 
+Create Database
+##### The Code First Approach was used in this project. The migration scripts are stored under project_root/Migrations folder. To create a new databaes, please fill in the database ConnectionString in project_root/appsettings.json, then run below script.
+```sh
+.\create-database.ps1
+```
+
 Invoke the UI
 
 ```sh
