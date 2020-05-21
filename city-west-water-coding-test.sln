@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.1145
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "city-west-water-coding-test", "city-west-water-coding-test\city-west-water-coding-test.csproj", "{C14555E3-6F71-4466-9244-A8070B16ED3C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolService.Tests", "SchoolService.Tests\SchoolService.Tests.csproj", "{2A5EB884-32E0-4535-9F1D-EFC6FEADF10B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{C14555E3-6F71-4466-9244-A8070B16ED3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C14555E3-6F71-4466-9244-A8070B16ED3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C14555E3-6F71-4466-9244-A8070B16ED3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A5EB884-32E0-4535-9F1D-EFC6FEADF10B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A5EB884-32E0-4535-9F1D-EFC6FEADF10B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A5EB884-32E0-4535-9F1D-EFC6FEADF10B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A5EB884-32E0-4535-9F1D-EFC6FEADF10B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
