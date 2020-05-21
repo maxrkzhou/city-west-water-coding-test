@@ -1,10 +1,20 @@
-# AST solution coding test  
+
+# City West Water coding test  
 
 ## Author
 
 Max Zhou
 
+## Description
+The api project is build on .NET core 2.2, please install the SDK if you don't have it installed.
+I also include the nodejs installer inside the repository, please install it if you don't have it installed.
 ## Example usage
+
+Invoke api project
+```sh
+Use visual studio 2017 or laster to open the solution project and run
+```
+.NET project is require visual stuido to open
 
 Invoke the UI
 
@@ -12,14 +22,8 @@ Invoke the UI
 .\run-UI.ps1
 ```
 
-.NET project is require visual stuido to open
-
 ### Test
 ```sh
 .\run-tests.ps1
 ```
-
-### Algorithm
-
-The Time complexity and Space complexity are written in code comments. For more details please check the source code.
-
+I also added swagger to the api project, you can simply run the api project and test the api from swagger ui.
