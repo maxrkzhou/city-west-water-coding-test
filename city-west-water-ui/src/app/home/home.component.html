@@ -1,0 +1,50 @@
+
+<h1>Class</h1>
+<button class="btn btn-warning float-right"  [routerLink]="['/class/add']">Add Class</button>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">Class Name</th>
+    <th scope="col">Location</th>
+    <th scope="col">Teacher</th>
+    <th scope="col"></th>
+    <th scope="col"></th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let class of classList" (click)="getClassStudents(class.id)" [ngClass]="class.name == selectedClass ? 'highlight' : ''">
+        <td>
+          {{ class.name }}
+        </td>
+        <td>{{ class.location }}</td>
+        <td>{{ class.teacher }}</td>
+        <td><a class="btn btn-primary"  [routerLink]="['/class/edit',class.id]">Edit</a></td>
+        <td><button class="btn btn-danger" (click)="deleteClass(class.id)">Delete</button></td>
+        </tr>
+  </tbody>
+</table>
+
+<h1>{{selectedClass}}</h1>
+<button class="btn btn-warning float-right"  [routerLink]="['/student/add']">Add Student</button>
+<table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Age</th>
+      <th scope="col">GPA</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of studentList">
+          <td [ngClass]="student.highlighted? 'max_gpa' : ''">
+            {{ student.firstName }} {{ student.lastName }}
+          </td>
+          <td>{{ student.age }}</td>
+          <td>{{ student.gpa }}</td>
+          <td><a class="btn btn-primary"  [routerLink]="['/student/edit',student.id]">Edit</a></td>
+          <td><button class="btn btn-danger" (click)="deleteStudent(student.id)">Delete</button></td>
+          </tr>
+    </tbody>
+  </table>

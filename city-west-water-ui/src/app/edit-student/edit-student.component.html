@@ -1,0 +1,76 @@
+<h1>Edit Student</h1>
+<form [formGroup]="studentForm" novalidate>
+    <input type="hidden" formControlName="id" />
+    <div class="form-group">
+      <label for="">First Name</label>
+      <input type="text" formControlName="firstname" class="form-control"  placeholder="First Name">
+      <div
+      *ngIf="_submitted && f.firstname.errors?.required"
+      class="error"
+    >
+      First Name is required
+    </div>
+    </div>
+    <div class="form-group">
+        <label for="">Last Name</label>
+        <input type="text" formControlName="lastname" class="form-control"  placeholder="Last Name"  (change)="checkStudent()">
+        <div
+        *ngIf="_submitted && f.lastname.errors?.required"
+        class="error"
+      >
+        Last Name is required
+      </div>
+    </div>
+    <div class="form-group">
+        <label for="">Age</label>
+        <input type="text" formControlName="age" class="form-control"  placeholder="Age">
+        <div
+        *ngIf="_submitted && f.age.errors?.required"
+        class="error"
+      >
+        Age is required
+      </div>
+      <div
+      *ngIf="_submitted && f.age.errors?.pattern"
+      class="error"
+    >
+      Invalid Age
+    </div>
+    </div>
+    <div class="form-group">
+        <label for="">GPA</label>
+        <input type="text" formControlName="gpa" class="form-control"  placeholder="GPA">
+        <div
+        *ngIf="_submitted && f.gpa.errors?.required"
+        class="error"
+      >
+        GPA is required
+      </div>
+      <div
+      *ngIf="_submitted && f.gpa.errors?.pattern"
+      class="error"
+    >
+      Invalid GPA, GAP should be onne decimal number (i.g. 3.2)
+    </div>
+    </div>
+    <div class="form-group">
+        <label for="">Enrol Class</label>
+        <select class="form-control" formControlName="enrolClass" (change)="checkStudent()">
+            <option *ngFor="let class of classList" [ngValue]="class.id">{{class.name}}</option>
+        </select>
+        <div
+        *ngIf="_submitted && f.enrolClass.errors?.required"
+        class="error"
+      >
+        Class is required
+      </div>
+      <div
+      *ngIf="_submitted && _invalidStudent"
+      class="error"
+    >
+      A student has same surname has already enrolled in this class
+    </div>
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="onSubmit()">Submit</button>
+    <a  [routerLink]="['/']"class="btn btn-default">Cancel</a>
+  </form>

@@ -1,0 +1,37 @@
+<h1>Edit Class</h1>
+<form  [formGroup]="classForm" novalidate> 
+    <input type="hidden" formControlName="id" />
+    <div class="form-group">
+      <label for="">Class Name</label>
+      <input type="text" class="form-control" formControlName="name" placeholder="Class Name">
+      <div
+      *ngIf="_submitted && f.name.errors?.required"
+      class="error"
+    >
+      Class Name is required
+    </div>
+    </div>
+
+    <div class="form-group">
+        <label for="">Location</label>
+        <input type="text" class="form-control" formControlName="location" placeholder="Location">
+        <div
+        *ngIf="_submitted && f.location.errors?.required"
+        class="error"
+      >
+        Location is required
+      </div>
+    </div>
+    <div class="form-group">
+        <label for="">Teacher</label>
+        <input type="text" class="form-control" formControlName="teacher" placeholder="Teacher">
+        <div
+        *ngIf="_submitted && f.teacher.errors?.required"
+        class="error"
+      >
+        Teacher is required
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="onSubmit()">Submit</button>
+    <a  [routerLink]="['/']"class="btn btn-default">Cancel</a>
+  </form>
