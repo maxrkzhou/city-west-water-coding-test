@@ -86,8 +86,7 @@ namespace city_west_water_coding_test.ApplicationLayer
         {
             var result = new Result<List<StudentDto>>();
             var students = await _repository.ListStudentByClass(classId);
-            result.Value = students.Select(x => x.ToModel()).OrderByDescending(x=>x.GPA).ToList();
-            if (result.Value.Count > 0) result.Value[0].Highlighted = true;
+            result.Value = students.Select(x => x.ToModel()).ToList();
             return result;
         }
 

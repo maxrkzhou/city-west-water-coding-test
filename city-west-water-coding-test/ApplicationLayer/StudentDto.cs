@@ -26,7 +26,8 @@ namespace city_west_water_coding_test.ApplicationLayer
                 FirstName = entity.FirstName,
                 LastName = entity.LastName,
                 Age = entity.Age,
-                GPA = entity.GPA
+                GPA = entity.GPA,
+                Highlighted = entity.GPA >= 3.2d ? true : false
             };
         }
 
