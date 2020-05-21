@@ -21,6 +21,11 @@ Create Database
 ```sh
 .\create-database.ps1
 ```
+Error Handling
+```sh
+I created a middleware ExceptionHandlerMiddleware to handle the exceptions that are thrown from the project. Use NLog to log the error and return a random log id to user for them to create ticket. 
+```
+
 
 Invoke the UI
 
